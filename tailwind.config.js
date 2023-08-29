@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['index.html'],
+  darkMode: 'class',
   theme: {
     container:{
       center: true,
@@ -17,5 +18,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    "prettier-plugin-svelte",
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss" // MUST come last
+  ],
 }
